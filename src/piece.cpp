@@ -61,21 +61,21 @@ vector<vector<Tile>> Piece::make_grid_(string str) {
 
     for (int col = 0; col < piece_width; ++col) {
         Tile tile_0{ge211::Position(col, 0), Color::white()};
-        tile_0.letter = letter;
+        tile_0.letter = str;
         vectors[0].push_back(tile_0);
         if (row_0[col] == 1) {
             vectors[0][col].active = true;
         }
 
         Tile tile_1{ge211::Position(col, 1), Color::white()};
-        tile_1.letter = letter;
+        tile_1.letter = str;
         vectors[1].push_back(tile_1);
         if (row_1[col] == 1) {
             vectors[1][col].active = true;
         }
 
         Tile tile_2{ge211::Position(col, 2), Color::white()};
-        tile_2.letter = letter;
+        tile_2.letter = str;
         vectors[2].push_back(tile_2);
         if (row_2[col] == 1) {
             vectors[2][col].active = true;

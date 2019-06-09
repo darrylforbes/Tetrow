@@ -33,8 +33,6 @@ int Model::get_score() const {
 }
 
 void Model::launch_piece_() {
-    // Game doesn't work without this random assignment and I have no idea why
-    int x;
     active_piece = get_next_piece_();
 }
 
@@ -191,7 +189,6 @@ void Model::piece_rotate() {
 Piece Model::get_next_piece_() {
     vector<string> piece_type{"j","l","s","z","t"};
     int rand_num = rand() % 5;
-    Piece test_piece = Piece(piece_type[1]);
 
     return Piece(piece_type[rand_num]);
 }
